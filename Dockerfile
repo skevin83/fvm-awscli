@@ -1,6 +1,6 @@
 FROM debian
 ENV NONINTERACTIVE=true
-ENV PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+ENV PATH=/home/linuxbrew/.linuxbrew/bin:/usr/bin:$PATH
 WORKDIR /app
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install -y build-essential procps curl file git nano wget unzip awscli
